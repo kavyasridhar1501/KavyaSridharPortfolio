@@ -1,17 +1,19 @@
+"use client";
+
 import Image from "next/image";
-import myImage from "@/public/my_image.jpg"; // ⬅️ exact file name from /public
+import myImage from "@/public/my_image.jpg"; // <-- EXACT name from /public
 
 export default function HeroSection() {
   return (
-    <div className="flex flex-col items-center">
+    <section className="flex flex-col items-center py-12">
       <div className="relative w-64 h-64 rounded-full shadow-2xl ring-1 ring-black/5 overflow-hidden">
         <Image
-          src={myImage}        // ⬅️ uses a module import, so no path/basePath issues
+          src={myImage}        // static import => no path bugs
           alt="Kavya Sridhar"
-          fill                  // makes it cover the parent circle
+          fill                 // fill requires a sized, relative parent (we set w-64 h-64 + relative)
           className="object-cover"
           priority
-          unoptimized           // safe with GitHub Pages static export
+          unoptimized          // safe for GitHub Pages static export
         />
       </div>
 
@@ -19,6 +21,6 @@ export default function HeroSection() {
         Kavya Sridhar
       </h1>
       <p className="mt-2 text-xl text-slate-500">ML and AI Enthusiast</p>
-    </div>
+    </section>
   );
 }
