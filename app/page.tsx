@@ -1,12 +1,8 @@
-// app/page.tsx
 'use client'
-
 import Link from 'next/link'
 
 export default function Home() {
-  const resumeUrl =
-    (process.env.NEXT_PUBLIC_BASE_PATH || '') + '/resume.pdf'
-
+  const resumeUrl = (process.env.NEXT_PUBLIC_BASE_PATH || '') + '/resume.pdf'
   return (
     <main className="flex flex-col items-center justify-center min-h-screen bg-gray-50 text-gray-900 p-6">
       <section className="text-center max-w-2xl">
@@ -14,9 +10,7 @@ export default function Home() {
         <p className="text-lg text-gray-600 mb-6">
           I’m a passionate developer who loves building web experiences and exploring new technologies.
         </p>
-
         <div className="flex justify-center gap-4">
-          {/* Resume button */}
           <a
             href={resumeUrl}
             target="_blank"
@@ -25,8 +19,6 @@ export default function Home() {
           >
             View Resume
           </a>
-
-          {/* Optional download link */}
           <a
             href={resumeUrl}
             download
@@ -36,7 +28,6 @@ export default function Home() {
           </a>
         </div>
       </section>
-
       <footer className="mt-12 text-sm text-gray-500">
         <p>
           Built with ❤️ using <Link href="https://nextjs.org" className="underline">Next.js</Link>
