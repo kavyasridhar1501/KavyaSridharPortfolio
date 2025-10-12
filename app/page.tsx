@@ -1,6 +1,6 @@
+// app/page.tsx
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Home() {
@@ -39,7 +39,7 @@ export default function Home() {
 
       <footer className="mt-12 text-sm text-gray-500">
         <p>
-          Built using <Link href="https://nextjs.org" className="underline">Next.js</Link>
+          Built with ❤️ using <Link href="https://nextjs.org" className="underline">Next.js</Link>
         </p>
       </footer>
     </main>
