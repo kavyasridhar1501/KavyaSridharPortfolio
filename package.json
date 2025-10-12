@@ -24,5 +24,11 @@
 		"eslint": "^9",
 		"eslint-config-next": "15.1.6",
 		"@eslint/eslintrc": "^3"
-	}
+	},
+  "scripts": {
+    "build": "next build",
+    "export": "next export",
+    "deploy:gh": "npm run build && npm run export && touch out/.nojekyll && git checkout -B gh-pages && git --work-tree out add --all && git --work-tree out commit -m \"Deploy\" || true && git push origin HEAD:gh-pages --force && git checkout -"
+  }
+
 }
