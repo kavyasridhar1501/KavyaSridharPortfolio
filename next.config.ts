@@ -1,29 +1,26 @@
 // next.config.ts
 import type { NextConfig } from 'next';
 
+const repo = 'KavyaSridharPortfolio';
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig: NextConfig = {
-  // Export static HTML for GitHub Pages
+  // GitHub Pages needs a static export
   output: 'export',
 
-  // Required because GitHub Pages doesn't support Next.js image optimization
-  images: {
-    unoptimized: true,
-  },
+  // Disable Next/Image optimization on static hosting
+  images: { unoptimized: true },
 
-  // Tell Next.js where your project will be hosted
-  basePath: '/KavyaSridharPortfolio',
-  assetPrefix: '/KavyaSridharPortfolio/',
+  // Serve from /<repo> only in production (so local dev works at /)
+  basePath: isProd ? `/${repo}` : '',
+  assetPrefix: isProd ? `/${repo}/` : undefined,
 
-  // Ensures that each route ends with a slash (fixes 404s on GitHub Pages)
+  // Avoid 404s for nested routes on Pages
   trailingSlash: true,
 
-  // Optional: enable React strict mode (helps catch issues)
+  // Optional, but helpful
   reactStrictMode: true,
-
-  // Optional: add ESLint build check ignore (so it doesn’t block builds)
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  eslint: { ignoreDuringBuilds: true },
 };
 
 export default nextConfig;
