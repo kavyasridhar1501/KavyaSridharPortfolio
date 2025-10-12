@@ -26,9 +26,8 @@ jobs:
           cache: 'npm'
 
       - run: npm ci
-      - run: npm run build
-      - run: npm run export
-      - run: touch out/.nojekyll  # let Pages serve files starting with underscores
+      - run: npm run build            # <- builds the static export into ./out when output: "export"
+      - run: touch out/.nojekyll      # for GitHub Pages
 
       - uses: actions/upload-pages-artifact@v3
         with:
