@@ -1,10 +1,14 @@
-const isProd = process.env.NODE_ENV === "production";
+// next.config.ts
+import type { NextConfig } from 'next'
 
-const nextConfig = {
-  output: "export",
-  images: { unoptimized: true },
-  basePath: isProd ? "/KavyaSridharPortfolio" : undefined,
-  assetPrefix: isProd ? "/KavyaSridharPortfolio/" : undefined,
-};
+const repo = 'KavyaSridharPortfolio'
+const isProd = process.env.NODE_ENV === 'production'
 
-export default nextConfig;
+const nextConfig: NextConfig = {
+  output: 'export',              // produce static site in ./out
+  basePath: isProd ? `/${repo}` : '',
+  assetPrefix: isProd ? `/${repo}/` : '',
+  images: { unoptimized: true }, // needed for static export + GitHub Pages
+}
+
+export default nextConfig
