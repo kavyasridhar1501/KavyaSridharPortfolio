@@ -8,7 +8,7 @@ export default function HeroSection() {
       <div className="text-center">
         <div className="mx-auto w-48 h-48 sm:w-56 sm:h-56 rounded-full overflow-hidden border-4 border-gray-50 shadow-lg transform scale-110 hover:scale-115 transition-transform duration-500">
           <Image
-            src="/my_image.jpg"
+            src="/KavyaSridharPortfolio/public/my_image.jpg"
             alt="Kavya Sridhar"
             width={224}
             height={224}
