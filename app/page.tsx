@@ -91,7 +91,7 @@ function ResumeSection() {
         </h2>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="/resume.pdf"
+            href="/KavyaSridharPortfolio/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block rounded-md bg-blue-600 px-6 py-2 text-white font-medium hover:bg-blue-700 transition"
@@ -99,7 +99,7 @@ function ResumeSection() {
             Open Resume
           </a>
           <a
-            href="/resume.pdf"
+            href="/KavyaSridharPortfolio/resume.pdf"
             download
             className="inline-block rounded-md border border-gray-300 px-6 py-2 text-gray-700 font-medium hover:bg-gray-100 transition"
           >
