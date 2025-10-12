@@ -6,10 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "export": "next export",
-    "preview": "npx serve out",               // optional local preview of 'out/'
-    "start": "next start",                    // only used if you ever SSR locally
-    "lint": "next lint",
-    "deploy:gh": "npm run build && npm run export && touch out/.nojekyll && git checkout -B gh-pages && git --work-tree out add --all && git --work-tree out commit -m \"Deploy\" || true && git push origin HEAD:gh-pages --force && git checkout -"
+    "preview": "npx serve out",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "15.1.6",
