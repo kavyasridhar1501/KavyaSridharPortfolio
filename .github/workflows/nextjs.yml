@@ -25,11 +25,15 @@ jobs:
           node-version: 20
           cache: npm
 
+      # Install dependencies and build the Next.js static site
       - run: npm ci
       - run: npm run build
       - run: npm run export
+
+      # Prevent GitHub Pages from ignoring folders starting with "_"
       - run: touch out/.nojekyll
 
+      # Upload the static export as an artifact for deployment
       - name: Upload static site
         uses: actions/upload-pages-artifact@v3
         with:
