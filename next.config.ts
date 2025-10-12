@@ -1,16 +1,13 @@
-import type { NextConfig } from 'next';
+// next.config.ts
+import type { NextConfig } from "next";
 
-const repo = 'KavyaSridharPortfolio';
-const isProd = process.env.NODE_ENV === 'production';
+const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig: NextConfig = {
-  output: 'export',
-  images: { unoptimized: true },
-  basePath: isProd ? `/${repo}` : '',
-  assetPrefix: isProd ? `/${repo}/` : undefined,
-  trailingSlash: true,
-  reactStrictMode: true,
-  eslint: { ignoreDuringBuilds: true },
+  output: "export",              // <-- enables `next export`
+  images: { unoptimized: true }, // <-- required for static export
+  basePath: isProd ? "/KavyaSridharPortfolio" : undefined,
+  assetPrefix: isProd ? "/KavyaSridharPortfolio/" : undefined,
 };
 
 export default nextConfig;
