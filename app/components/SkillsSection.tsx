@@ -29,6 +29,10 @@ export default function SkillsSection() {
         'Natural Language Processing (NLP)',
         'Computer Vision',
         'Large Language Model',
+        'Generative AI',
+        'Data CI/CD Pipelines',
+        'ETL (Extract, Transform, Load)',
+        'Big Data Systems (Spark, Hadoop)'
       ],
     },
   ];
