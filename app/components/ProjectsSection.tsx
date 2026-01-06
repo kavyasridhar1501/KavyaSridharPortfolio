@@ -42,12 +42,6 @@ function githubOgFromUrl(url: string): string | undefined {
 
 const projects: Project[] = [
   {
-    title: "Snap&Know — A Visual Product Discovery Assistant",
-    date: "June 2025",
-    tech: ["RAG", "LangChain", "LangGraph", "GROQ", "LLaMA 3-70B"],
-    href: "https://github.com/kavyasridhar1501/SnapAndKnow",
-  },
-  {
     title: "ChurnGuard — Churn Prediction Platform",
     date: "2024",
     tech: ["Python", "Machine Learning", "Data Analysis"],
@@ -58,6 +52,12 @@ const projects: Project[] = [
     date: "2024",
     tech: ["RAG", "LangChain", "Python", "Hugging Face"],
     href: "https://github.com/kavyasridhar1501/LegalInsight-SelfRAG-HallucinationDetection",
+  },
+  {
+    title: "Snap&Know — A Visual Product Discovery Assistant",
+    date: "June 2025",
+    tech: ["RAG", "LangChain", "LangGraph", "GROQ", "LLaMA 3-70B"],
+    href: "https://github.com/kavyasridhar1501/SnapAndKnow",
   },
   {
     title: "NLA Vs SoTA Methods in 3D Reconstruction",
