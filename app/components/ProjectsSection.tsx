@@ -10,7 +10,7 @@ type Project = {
 // Assign soft colors by tech family
 function getTechColor(tech: string): string {
   const name = tech.toLowerCase();
-  if (["python", "tensorflow", "keras", "pytorch", "hugging face", "langchain", "llama 3-70b", "rag", "langgraph"].some((k) => name.includes(k))) {
+  if (["python", "tensorflow", "keras", "pytorch", "hugging face", "langchain", "llama 3-70b", "rag", "langgraph", "machine learning", "data analysis"].some((k) => name.includes(k))) {
     return "bg-green-100 text-green-800 border-green-200"; // ML/AI
   }
   if (["mysql", "postgresql", "neo4j", "spark", "hadoop", "amazon s3", "sql"].some((k) => name.includes(k))) {
@@ -46,6 +46,18 @@ const projects: Project[] = [
     date: "June 2025",
     tech: ["RAG", "LangChain", "LangGraph", "GROQ", "LLaMA 3-70B"],
     href: "https://github.com/kavyasridhar1501/SnapAndKnow",
+  },
+  {
+    title: "ChurnGuard — Churn Prediction Platform",
+    date: "2024",
+    tech: ["Python", "Machine Learning", "Data Analysis"],
+    href: "https://github.com/kavyasridhar1501/ChurnGuard-Churn-Prediction-Platform",
+  },
+  {
+    title: "LegalInsight — Self-RAG Hallucination Detection",
+    date: "2024",
+    tech: ["RAG", "LangChain", "Python", "Hugging Face"],
+    href: "https://github.com/kavyasridhar1501/LegalInsight-SelfRAG-HallucinationDetection",
   },
   {
     title: "NLA Vs SoTA Methods in 3D Reconstruction",
