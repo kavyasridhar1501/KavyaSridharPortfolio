@@ -82,9 +82,7 @@ export default function ProjectsSection() {
             >
               {/* Project Image Placeholder */}
               <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                <span className="text-4xl font-heading font-bold text-primary">
-                  {project.title.charAt(0)}
-                </span>
+                <FaGithub className="text-6xl text-gray-400" />
               </div>
 
               {/* Project Info */}

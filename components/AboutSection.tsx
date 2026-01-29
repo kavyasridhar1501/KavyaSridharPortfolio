@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 const stats = [
   { number: "1+", label: "Years Experience" },
@@ -83,10 +84,14 @@ export default function AboutSection() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="relative"
           >
-            <div className="w-64 h-64 md:w-80 md:h-80 mx-auto bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center shadow-lg">
-              <span className="text-7xl md:text-8xl font-heading font-bold text-primary">
-                KS
-              </span>
+            <div className="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/image.jpg"
+                alt="Kavya Sridhar"
+                width={320}
+                height={320}
+                className="w-full h-full object-cover"
+              />
             </div>
           </motion.div>
 
@@ -97,7 +102,7 @@ export default function AboutSection() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <h3 className="text-2xl font-heading font-semibold text-primary mb-4">
-              Data Scientist & ML Engineer
+              Ex-Software Engineer and Data Science Grad Student
             </h3>
             <p className="text-text-secondary mb-6 leading-relaxed">
               I&apos;m a Master&apos;s student in Data Science at UC San Diego with a strong
