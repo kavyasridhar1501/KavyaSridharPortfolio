@@ -76,36 +76,19 @@ export default function AboutSection() {
 
         {/* About Content */}
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
-          {/* Image/Avatar with Pop-out Effect */}
+          {/* Image/Avatar */}
           <motion.div
             initial={{ x: -50 }}
             animate={isInView ? { x: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="relative flex justify-center"
+            className="relative"
           >
-            {/* Background Shape */}
-            <div className="relative">
-              {/* Gradient Background Card */}
-              <div className="absolute top-8 left-1/2 -translate-x-1/2 w-64 h-72 md:w-72 md:h-80 bg-gradient-to-br from-gray-800 via-gray-900 to-black rounded-3xl shadow-2xl" />
-
-              {/* Decorative Elements */}
-              <div className="absolute top-4 left-1/2 -translate-x-1/2 w-56 h-64 md:w-64 md:h-72 border-2 border-gray-300 rounded-3xl opacity-50" />
-
-              {/* Image Container - Pops out */}
-              <div className="relative z-10 w-64 h-80 md:w-72 md:h-96">
-                <img
-                  src="/KavyaSridharPortfolio/image.jpg"
-                  alt="Kavya Sridhar"
-                  className="w-full h-full object-cover object-top rounded-3xl shadow-xl"
-                  style={{
-                    maskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)',
-                    WebkitMaskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)'
-                  }}
-                />
-              </div>
-
-              {/* Glow Effect */}
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-48 h-8 bg-gray-800 blur-2xl opacity-30 rounded-full" />
+            <div className="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src="/KavyaSridharPortfolio/image.jpg"
+                alt="Kavya Sridhar"
+                className="w-full h-full object-cover scale-125 object-top"
+              />
             </div>
           </motion.div>
 
