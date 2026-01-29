@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import Image from "next/image";
 
 const stats = [
   { number: "1+", label: "Years Experience" },
@@ -85,11 +84,9 @@ export default function AboutSection() {
             className="relative"
           >
             <div className="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-2xl overflow-hidden shadow-lg">
-              <Image
-                src="./public/image.jpg"
+              <img
+                src="/KavyaSridharPortfolio/image.jpg"
                 alt="Kavya Sridhar"
-                width={320}
-                height={320}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -118,7 +115,7 @@ export default function AboutSection() {
               with expertise in RAG systems, adversarial ML, and production ETL pipelines.
             </p>
             <a
-              href="./public/resume.pdf"
+              href="/KavyaSridharPortfolio/resume.pdf"
               download
               className="inline-block bg-primary text-white font-semibold px-8 py-3 rounded-full hover:bg-gray-800 transition-all duration-300"
             >
