@@ -45,8 +45,8 @@ export default function AboutSection() {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          initial={{ y: 20 }}
+          animate={isInView ? { y: 0 } : {}}
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
@@ -58,8 +58,8 @@ export default function AboutSection() {
 
         {/* Stats Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          initial={{ y: 30 }}
+          animate={isInView ? { y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20"
         >
@@ -79,8 +79,8 @@ export default function AboutSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           {/* Image/Avatar */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            initial={{ x: -50 }}
+            animate={isInView ? { x: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.3 }}
             className="relative"
           >
@@ -97,8 +97,8 @@ export default function AboutSection() {
 
           {/* Text Content */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            initial={{ x: 50 }}
+            animate={isInView ? { x: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <h3 className="text-2xl font-heading font-semibold text-primary mb-4">
@@ -129,8 +129,8 @@ export default function AboutSection() {
 
         {/* Experience Timeline */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          initial={{ y: 30 }}
+          animate={isInView ? { y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
           <h3 className="text-2xl font-heading font-semibold text-primary text-center mb-12">

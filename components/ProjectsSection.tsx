@@ -56,8 +56,8 @@ export default function ProjectsSection() {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          initial={{ y: 20 }}
+          animate={isInView ? { y: 0 } : {}}
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
@@ -75,8 +75,8 @@ export default function ProjectsSection() {
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              initial={{ y: 30 }}
+              animate={isInView ? { y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
             >
@@ -128,8 +128,8 @@ export default function ProjectsSection() {
 
         {/* GitHub Link */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          initial={{ y: 20 }}
+          animate={isInView ? { y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.4 }}
           className="text-center mt-12"
         >
