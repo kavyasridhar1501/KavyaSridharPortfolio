@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000000;
+  color: #FFFFFF;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C7AA00;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E5C700;
+}
+
+/* Selection styling */
+::selection {
+  background-color: #C7AA00;
+  color: #000000;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #C7AA00 0%, #E5C700 50%, #C7AA00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow effect */
+.glow {
+  box-shadow: 0 0 20px rgba(199, 170, 0, 0.3);
+}
+
+.glow-text {
+  text-shadow: 0 0 20px rgba(199, 170, 0, 0.5);
+}
+
+/* Section styling */
+.section {
+  @apply min-h-screen py-20 px-4 md:px-8 lg:px-16;
+}
+
+/* Card hover effect */
+.card-hover {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.card-hover:hover {
+  @apply transform -translate-y-2;
+  box-shadow: 0 10px 40px rgba(199, 170, 0, 0.15);
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-accent text-primary font-semibold px-8 py-3 rounded-full transition-all duration-300;
+}
+
+.btn-primary:hover {
+  @apply bg-accent-hover transform scale-105;
+  box-shadow: 0 0 30px rgba(199, 170, 0, 0.4);
+}
+
+.btn-outline {
+  @apply border-2 border-accent text-accent font-semibold px-8 py-3 rounded-full transition-all duration-300;
+}
+
+.btn-outline:hover {
+  @apply bg-accent text-primary transform scale-105;
+}
+
+/* Animated underline */
+.animated-underline {
+  position: relative;
+}
+
+.animated-underline::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #C7AA00;
+  transition: width 0.3s ease-in-out;
+}
+
+.animated-underline:hover::after {
+  width: 100%;
+}
