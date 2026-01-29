@@ -19,7 +19,6 @@ import {
   SiPostgresql,
 } from "react-icons/si";
 import { BiData } from "react-icons/bi";
-import { BsBrainFill } from "react-icons/bs";
 
 const skills = [
   { name: "Python", icon: FaPython, color: "#3776AB" },
