@@ -86,7 +86,7 @@ export default function AboutSection() {
           >
             <div className="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="/image.jpg"
+                src="/public/image.jpg"
                 alt="Kavya Sridhar"
                 width={320}
                 height={320}
@@ -118,7 +118,7 @@ export default function AboutSection() {
               with expertise in RAG systems, adversarial ML, and production ETL pipelines.
             </p>
             <a
-              href="/resume.pdf"
+              href="/public/resume.pdf"
               download
               className="inline-block bg-primary text-white font-semibold px-8 py-3 rounded-full hover:bg-gray-800 transition-all duration-300"
             >
