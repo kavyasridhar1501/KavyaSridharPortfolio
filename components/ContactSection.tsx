@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { FaEnvelope, FaMapMarkerAlt, FaPhone, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaEnvelope, FaMapMarkerAlt, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const contactInfo = [
   {
@@ -17,12 +17,6 @@ const contactInfo = [
     label: "Location",
     value: "La Jolla, CA",
     href: null,
-  },
-  {
-    icon: FaPhone,
-    label: "Phone",
-    value: "858-372-3468",
-    href: "tel:+18583723468",
   },
 ];
 
