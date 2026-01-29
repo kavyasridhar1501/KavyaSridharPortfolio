@@ -87,7 +87,7 @@ export default function AboutSection() {
               <img
                 src="/KavyaSridharPortfolio/image.jpg"
                 alt="Kavya Sridhar"
-                className="w-full h-full object-cover scale-125 object-top"
+                className="w-full h-full object-cover scale-125"
               />
             </div>
           </motion.div>
