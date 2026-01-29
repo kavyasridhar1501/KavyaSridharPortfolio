@@ -15,8 +15,8 @@ export default function HeroSection() {
       <div className="max-w-6xl mx-auto px-4 py-20 text-center">
         {/* Wave Icon */}
         <motion.div
-          initial={{ opacity: 0, rotate: -20 }}
-          animate={{ opacity: 1, rotate: 0 }}
+          initial={{ rotate: -20 }}
+          animate={{ rotate: 0 }}
           transition={{ duration: 0.5 }}
           className="text-5xl mb-6 inline-block"
         >
@@ -31,8 +31,8 @@ export default function HeroSection() {
 
         {/* Name */}
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ y: 20 }}
+          animate={{ y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-primary mb-4"
         >
@@ -41,8 +41,8 @@ export default function HeroSection() {
 
         {/* Role */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ y: 20 }}
+          animate={{ y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-xl md:text-2xl text-text-secondary mb-8"
         >
@@ -51,8 +51,8 @@ export default function HeroSection() {
 
         {/* Description */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ y: 20 }}
+          animate={{ y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-text-secondary text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
         >
@@ -63,8 +63,8 @@ export default function HeroSection() {
 
         {/* Social Links */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ y: 20 }}
+          animate={{ y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           className="flex justify-center gap-4 mb-10"
         >
@@ -84,8 +84,8 @@ export default function HeroSection() {
 
         {/* CTA Buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ y: 20 }}
+          animate={{ y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
