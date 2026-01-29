@@ -96,7 +96,7 @@ export default function HeroSection() {
             Get In Touch
           </a>
           <a
-            href="/resume.pdf"
+            href="/KavyaSridharPortfolio/resume.pdf"
             download
             className="border-2 border-primary text-primary font-semibold px-8 py-3 rounded-full hover:bg-primary hover:text-white transition-all duration-300"
           >

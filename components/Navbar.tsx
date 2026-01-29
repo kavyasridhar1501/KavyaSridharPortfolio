@@ -51,7 +51,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="/resume.pdf"
+              href="/KavyaSridharPortfolio/resume.pdf"
               download
               className="bg-primary text-white font-medium px-6 py-2 rounded-full text-sm hover:bg-gray-800 transition-all duration-300"
             >
@@ -89,7 +89,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="/resume.pdf"
+              href="/KavyaSridharPortfolio/resume.pdf"
               download
               className="block bg-primary text-white text-center font-medium px-6 py-2 rounded-full text-sm mt-4"
             >
