@@ -15,8 +15,8 @@ html {
 }
 
 body {
-  background-color: #000000;
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+  color: #1a1a1a;
   font-family: 'Inter', system-ui, sans-serif;
 }
 
@@ -26,44 +26,35 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #111111;
+  background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C7AA00;
+  background: #1a1a1a;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #E5C700;
+  background: #333333;
 }
 
 /* Selection styling */
 ::selection {
-  background-color: #C7AA00;
-  color: #000000;
+  background-color: #1a1a1a;
+  color: #FFFFFF;
 }
 
 /* Gradient text utility */
 .gradient-text {
-  background: linear-gradient(135deg, #C7AA00 0%, #E5C700 50%, #C7AA00 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Glow effect */
-.glow {
-  box-shadow: 0 0 20px rgba(199, 170, 0, 0.3);
-}
-
-.glow-text {
-  text-shadow: 0 0 20px rgba(199, 170, 0, 0.5);
-}
-
 /* Section styling */
 .section {
-  @apply min-h-screen py-20 px-4 md:px-8 lg:px-16;
+  @apply py-20 px-4 md:px-8 lg:px-16;
 }
 
 /* Card hover effect */
@@ -72,26 +63,25 @@ body {
 }
 
 .card-hover:hover {
-  @apply transform -translate-y-2;
-  box-shadow: 0 10px 40px rgba(199, 170, 0, 0.15);
+  @apply transform -translate-y-1;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 
 /* Button styles */
 .btn-primary {
-  @apply bg-accent text-primary font-semibold px-8 py-3 rounded-full transition-all duration-300;
+  @apply bg-primary text-white font-semibold px-8 py-3 rounded-full transition-all duration-300;
 }
 
 .btn-primary:hover {
-  @apply bg-accent-hover transform scale-105;
-  box-shadow: 0 0 30px rgba(199, 170, 0, 0.4);
+  @apply bg-gray-800 transform scale-105;
 }
 
 .btn-outline {
-  @apply border-2 border-accent text-accent font-semibold px-8 py-3 rounded-full transition-all duration-300;
+  @apply border-2 border-primary text-primary font-semibold px-8 py-3 rounded-full transition-all duration-300;
 }
 
 .btn-outline:hover {
-  @apply bg-accent text-primary transform scale-105;
+  @apply bg-primary text-white transform scale-105;
 }
 
 /* Animated underline */
@@ -106,10 +96,41 @@ body {
   height: 2px;
   bottom: -2px;
   left: 0;
-  background-color: #C7AA00;
+  background-color: #1a1a1a;
   transition: width 0.3s ease-in-out;
 }
 
 .animated-underline:hover::after {
   width: 100%;
+}
+
+/* Timeline styles */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: #e5e5e5;
+}
+
+.timeline-dot {
+  @apply w-4 h-4 rounded-full bg-white border-2 border-gray-300 absolute left-1/2 transform -translate-x-1/2;
+}
+
+.timeline-dot.active {
+  @apply bg-primary border-primary;
+}
+
+/* Stats card */
+.stat-card {
+  @apply text-center p-8;
+}
+
+.stat-number {
+  @apply text-4xl md:text-5xl font-bold text-primary mb-2;
+}
+
+.stat-label {
+  @apply text-gray-500 text-sm uppercase tracking-wider;
 }

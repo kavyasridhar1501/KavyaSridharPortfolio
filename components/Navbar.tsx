@@ -30,19 +30,15 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-primary/90 backdrop-blur-md shadow-lg" : "bg-transparent"
+        isScrolled ? "bg-white shadow-sm" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <motion.a
-            href="#home"
-            className="text-2xl font-heading font-bold gradient-text"
-            whileHover={{ scale: 1.05 }}
-          >
+          <a href="#home" className="text-xl font-heading font-bold text-primary">
             KS
-          </motion.a>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -50,7 +46,7 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-text-secondary hover:text-accent transition-colors duration-300 animated-underline"
+                className="text-text-secondary hover:text-primary transition-colors duration-300 text-sm"
               >
                 {link.name}
               </a>
@@ -58,7 +54,7 @@ export default function Navbar() {
             <a
               href="/resume.pdf"
               download
-              className="btn-primary text-sm"
+              className="bg-primary text-white font-medium px-6 py-2 rounded-full text-sm hover:bg-gray-800 transition-all duration-300"
             >
               Download CV
             </a>
@@ -66,10 +62,10 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-text-primary"
+            className="md:hidden text-primary"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <HiX size={28} /> : <HiMenu size={28} />}
+            {isMobileMenuOpen ? <HiX size={24} /> : <HiMenu size={24} />}
           </button>
         </div>
       </div>
@@ -80,14 +76,14 @@ export default function Navbar() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="md:hidden bg-secondary/95 backdrop-blur-md"
+          className="md:hidden bg-white border-t border-gray-100"
         >
           <div className="px-4 py-6 space-y-4">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="block text-text-secondary hover:text-accent transition-colors duration-300"
+                className="block text-text-secondary hover:text-primary transition-colors duration-300"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.name}
@@ -96,7 +92,7 @@ export default function Navbar() {
             <a
               href="/resume.pdf"
               download
-              className="block btn-primary text-center text-sm mt-4"
+              className="block bg-primary text-white text-center font-medium px-6 py-2 rounded-full text-sm mt-4"
             >
               Download CV
             </a>

@@ -9,12 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#000000",
-        secondary: "#111111",
-        accent: "#C7AA00",
-        "accent-hover": "#E5C700",
-        "text-primary": "#FFFFFF",
-        "text-secondary": "#A0A0A0",
+        primary: "#1a1a1a",
+        secondary: "#f8f8f8",
+        accent: "#1a1a1a",
+        softGray: "#f5f5f5",
+        mistGray: "#e5e5e5",
+        "text-primary": "#1a1a1a",
+        "text-secondary": "#666666",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
@@ -23,7 +24,6 @@ const config: Config = {
       animation: {
         "fade-in": "fadeIn 0.5s ease-in-out",
         "slide-up": "slideUp 0.5s ease-out",
-        "pulse-slow": "pulse 3s infinite",
       },
       keyframes: {
         fadeIn: {

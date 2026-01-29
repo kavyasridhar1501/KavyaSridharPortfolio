@@ -11,117 +11,97 @@ const socialLinks = [
 
 export default function HeroSection() {
   return (
-    <section
-      id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden"
-    >
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-primary" />
-
-      {/* Animated background circles */}
-      <div className="absolute inset-0 overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-white relative">
+      <div className="max-w-6xl mx-auto px-4 py-20 text-center">
+        {/* Wave Icon */}
         <motion.div
-          className="absolute -top-40 -right-40 w-80 h-80 bg-accent/10 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute -bottom-40 -left-40 w-80 h-80 bg-accent/10 rounded-full blur-3xl"
-          animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.5, 0.3, 0.5],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-      </div>
-
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, rotate: -20 }}
+          animate={{ opacity: 1, rotate: 0 }}
           transition={{ duration: 0.5 }}
+          className="text-5xl mb-6 inline-block"
         >
-          <p className="text-accent text-lg md:text-xl mb-4 font-medium">
-            Hello, I&apos;m
-          </p>
+          <motion.span
+            animate={{ rotate: [0, 20, -20, 20, 0] }}
+            transition={{ duration: 1.5, delay: 0.5 }}
+            className="inline-block"
+          >
+            👋
+          </motion.span>
         </motion.div>
 
+        {/* Name */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold mb-6"
+          className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-primary mb-4"
         >
-          <span className="text-text-primary">Kavya </span>
-          <span className="gradient-text">Sridhar</span>
+          Hi, I&apos;m Kavya Sridhar
         </motion.h1>
 
-        <motion.div
+        {/* Role */}
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mb-8"
+          className="text-xl md:text-2xl text-text-secondary mb-8"
         >
-          <h2 className="text-xl md:text-2xl lg:text-3xl text-text-secondary font-light">
-            Data Scientist & ML Engineer
-          </h2>
-        </motion.div>
+          Data Scientist & Machine Learning Engineer
+        </motion.p>
 
+        {/* Description */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-text-secondary text-lg md:text-xl max-w-2xl mx-auto mb-10"
+          className="text-text-secondary text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Master&apos;s student in Data Science at UC San Diego with a strong foundation in
-          Machine Learning, NLP, and Large Language Models. Passionate about leveraging
-          data-driven solutions to drive meaningful impact.
+          Master&apos;s student in Data Science at UC San Diego with expertise in
+          Machine Learning, NLP, and Large Language Models. Building data-driven
+          solutions that make an impact.
         </motion.p>
 
+        {/* Social Links */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
-        >
-          <a href="#projects" className="btn-primary">
-            View My Work
-          </a>
-          <a href="#contact" className="btn-outline">
-            Get In Touch
-          </a>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="flex justify-center gap-6"
+          className="flex justify-center gap-4 mb-10"
         >
           {socialLinks.map((social) => (
-            <motion.a
+            <a
               key={social.label}
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-text-secondary hover:text-accent transition-colors duration-300"
-              whileHover={{ scale: 1.2, y: -2 }}
+              className="w-12 h-12 rounded-full border-2 border-gray-200 flex items-center justify-center text-text-secondary hover:border-primary hover:text-primary transition-all duration-300"
               aria-label={social.label}
             >
-              <social.icon size={24} />
-            </motion.a>
+              <social.icon size={20} />
+            </a>
           ))}
+        </motion.div>
+
+        {/* CTA Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="flex flex-col sm:flex-row gap-4 justify-center"
+        >
+          <a
+            href="#contact"
+            className="bg-primary text-white font-semibold px-8 py-3 rounded-full hover:bg-gray-800 transition-all duration-300"
+          >
+            Get In Touch
+          </a>
+          <a
+            href="/resume.pdf"
+            download
+            className="border-2 border-primary text-primary font-semibold px-8 py-3 rounded-full hover:bg-primary hover:text-white transition-all duration-300"
+          >
+            Download CV
+          </a>
         </motion.div>
       </div>
 
@@ -131,9 +111,9 @@ export default function HeroSection() {
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
-        <div className="w-6 h-10 border-2 border-text-secondary rounded-full flex justify-center">
+        <div className="w-6 h-10 border-2 border-gray-300 rounded-full flex justify-center">
           <motion.div
-            className="w-1.5 h-3 bg-accent rounded-full mt-2"
+            className="w-1.5 h-3 bg-primary rounded-full mt-2"
             animate={{ opacity: [1, 0, 1], y: [0, 8, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           />
