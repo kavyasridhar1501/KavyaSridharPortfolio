@@ -7,6 +7,32 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
   {
+    title: "SmartSpend360",
+    subtitle: "Financial Analytics Platform",
+    description:
+      "Production-grade financial analytics platform for spending tracking, anomaly detection, and cash flow forecasting using a zero-cost cloud stack.",
+    highlights: [
+      "Isolation Forest anomaly detection",
+      "Prophet cash flow forecasting",
+      "Zero-cost deployment on free tiers",
+    ],
+    technologies: ["Python", "FastAPI", "React", "TypeScript", "Apache Airflow", "AWS S3", "PySpark"],
+    github: "https://github.com/kavyasridhar1501/SmartSpend360",
+  },
+  {
+    title: "SplitRight",
+    subtitle: "Expense Splitting PWA",
+    description:
+      "Mobile-first progressive web app for fair expense splitting among college roommates, with debt simplification and group management via invite codes.",
+    highlights: [
+      "Debt simplification algorithm",
+      "PWA with offline support",
+      "JWT auth with bcrypt security",
+    ],
+    technologies: ["Next.js", "TypeScript", "Node.js", "Express", "PostgreSQL"],
+    github: "https://github.com/kavyasridhar1501/SplitRight",
+  },
+  {
     title: "HemsHappen App",
     subtitle: "RAG-Based Medical Chatbot",
     description:
@@ -44,32 +70,6 @@ const projects = [
     ],
     technologies: ["PyTorch", "Adversarial ML", "Computer Vision"],
     github: "#",
-  },
-  {
-    title: "SmartSpend360",
-    subtitle: "Financial Analytics Platform",
-    description:
-      "Production-grade financial analytics platform for spending tracking, anomaly detection, and cash flow forecasting using a zero-cost cloud stack.",
-    highlights: [
-      "Isolation Forest anomaly detection",
-      "Prophet cash flow forecasting",
-      "Zero-cost deployment on free tiers",
-    ],
-    technologies: ["Python", "FastAPI", "React", "TypeScript", "Apache Airflow", "AWS S3", "PySpark"],
-    github: "https://github.com/kavyasridhar1501/SmartSpend360",
-  },
-  {
-    title: "SplitRight",
-    subtitle: "Expense Splitting PWA",
-    description:
-      "Mobile-first progressive web app for fair expense splitting among college roommates, with debt simplification and group management via invite codes.",
-    highlights: [
-      "Debt simplification algorithm",
-      "PWA with offline support",
-      "JWT auth with bcrypt security",
-    ],
-    technologies: ["Next.js", "TypeScript", "Node.js", "Express", "PostgreSQL"],
-    github: "https://github.com/kavyasridhar1501/SplitRight",
   },
 ];
 
