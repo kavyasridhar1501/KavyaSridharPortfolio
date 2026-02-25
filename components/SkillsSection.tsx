@@ -7,23 +7,23 @@ import { useRef } from "react";
 const skillCategories = [
   {
     title: "Programming",
-    skills: ["Python", "JavaScript", "SQL"],
+    skills: ["Python", "JavaScript", "TypeScript", "SQL"],
   },
   {
     title: "ML & AI",
-    skills: ["PyTorch", "LLMs", "RAG", "FAISS", "Adversarial Training"],
+    skills: ["PyTorch", "LLMs", "RAG", "FAISS", "Adversarial Training", "Prophet", "Isolation Forest"],
   },
   {
     title: "Data Engineering",
-    skills: ["Apache Spark", "ETL Pipelines", "Palantir Foundry"],
+    skills: ["Apache Spark", "Apache Airflow", "ETL Pipelines", "Palantir Foundry", "dbt"],
   },
   {
     title: "Web Development",
-    skills: ["Flask", "FastAPI", "React", "Next.js"],
+    skills: ["Flask", "FastAPI", "Express.js", "React", "Next.js"],
   },
   {
     title: "Cloud & DevOps",
-    skills: ["AWS S3", "Git", "Docker", "CI/CD"],
+    skills: ["AWS S3", "AWS DynamoDB", "Git", "Docker", "CI/CD", "Vercel", "Railway"],
   },
   {
     title: "Databases",
