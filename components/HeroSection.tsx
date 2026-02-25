@@ -46,7 +46,7 @@ export default function HeroSection() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-xl md:text-2xl text-text-secondary mb-8"
         >
-          Data Scientist & Machine Learning Engineer
+           Data Science Grad Student and Software Engineer 
         </motion.p>
 
         {/* Description */}
