@@ -18,6 +18,7 @@ const projects = [
     ],
     technologies: ["Python", "Prophet", "Supabase", "GitHub Actions", "Chart.js", "EIA API"],
     github: "https://github.com/kavyasridhar1501/EcoNode",
+    demo: "https://kavyasridhar1501.github.io/EcoNode/",
   },
   {
     title: "SmartSpend360",
@@ -31,6 +32,7 @@ const projects = [
     ],
     technologies: ["Python", "FastAPI", "React", "TypeScript", "Apache Airflow", "AWS S3", "PySpark"],
     github: "https://github.com/kavyasridhar1501/SmartSpend360",
+    demo: "https://smartspend360-app-pink.vercel.app/dashboard",
   },
   {
     title: "SplitRight",
@@ -44,6 +46,7 @@ const projects = [
     ],
     technologies: ["Next.js", "TypeScript", "Node.js", "Express", "PostgreSQL"],
     github: "https://github.com/kavyasridhar1501/SplitRight",
+    demo: "https://split-right-ecru.vercel.app",
   },
   {
     title: "HemsHappen App",
@@ -150,15 +153,28 @@ export default function ProjectsSection() {
 
                 {/* Links */}
                 <div className="flex gap-4 pt-4 border-t border-gray-100">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-text-secondary hover:text-primary transition-colors duration-300 text-sm"
-                  >
-                    <FaGithub />
-                    View Code
-                  </a>
+                  {project.github !== "#" && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-text-secondary hover:text-primary transition-colors duration-300 text-sm"
+                    >
+                      <FaGithub />
+                      View Code
+                    </a>
+                  )}
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-text-secondary hover:text-primary transition-colors duration-300 text-sm"
+                    >
+                      <FaExternalLinkAlt />
+                      Live Demo
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>

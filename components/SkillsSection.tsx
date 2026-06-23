@@ -19,7 +19,7 @@ const skillCategories = [
   },
   {
     title: "Web Development",
-    skills: ["Flask", "FastAPI", "Express.js", "React", "Next.js"],
+    skills: ["Flask", "FastAPI", "Express.js", "React", "Next.js", "Chart.js"],
   },
   {
     title: "Cloud & DevOps",
@@ -27,7 +27,7 @@ const skillCategories = [
   },
   {
     title: "Databases",
-    skills: ["PostgreSQL", "MongoDB", "Vector Stores"],
+    skills: ["PostgreSQL", "MongoDB", "Supabase", "Vector Stores"],
   },
 ];
 
