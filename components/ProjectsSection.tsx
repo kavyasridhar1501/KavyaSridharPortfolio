@@ -7,6 +7,19 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
   {
+    title: "EcoNode",
+    subtitle: "MLOps Renewable Energy Forecasting",
+    description:
+      "Fully automated MLOps pipeline that forecasts renewable energy availability and carbon intensity across US electrical grids using weather-enhanced Prophet models.",
+    highlights: [
+      "Weather-enhanced Prophet forecasting",
+      "48-hour carbon intensity outlook",
+      "Zero-maintenance GitHub Actions pipeline",
+    ],
+    technologies: ["Python", "Prophet", "Supabase", "GitHub Actions", "Chart.js", "EIA API"],
+    github: "https://github.com/kavyasridhar1501/EcoNode",
+  },
+  {
     title: "SmartSpend360",
     subtitle: "Financial Analytics Platform",
     description:
