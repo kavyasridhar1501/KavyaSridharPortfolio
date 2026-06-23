@@ -153,17 +153,15 @@ export default function ProjectsSection() {
 
                 {/* Links */}
                 <div className="flex gap-4 pt-4 border-t border-gray-100">
-                  {project.github !== "#" && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-text-secondary hover:text-primary transition-colors duration-300 text-sm"
-                    >
-                      <FaGithub />
-                      View Code
-                    </a>
-                  )}
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-text-secondary hover:text-primary transition-colors duration-300 text-sm"
+                  >
+                    <FaGithub />
+                    View Code
+                  </a>
                   {project.demo && (
                     <a
                       href={project.demo}
